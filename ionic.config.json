@@ -1,0 +1,7 @@
+{
+  "name": "proyect-sports",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
