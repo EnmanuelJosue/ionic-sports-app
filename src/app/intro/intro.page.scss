@@ -1,0 +1,27 @@
+
+swiper {
+  background-color: var(--ion-color-light);
+  height: 100%;
+  max-width: 800px;
+}
+.swiper-slide {
+  display: block;
+  margin-bottom: 64px;
+  background-color: white;
+
+}
+.logo-img{
+  width: 150px!important;
+}
+.ion-icon-style{
+  font-size: 5rem;
+}
+.icon-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3rem;
+}
+ion-content {
+  --background: var(--ion-color-light);
+}

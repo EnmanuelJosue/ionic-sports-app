@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://www.thesportsdb.com/api/v1/json/2/',
+  apiLoginPrueba: 'https://desolate-shore-16944.herokuapp.com/'
 };
 
 /*

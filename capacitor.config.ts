@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'proyect.sports.com',
   appName: 'proyect-sports',
   webDir: 'www',
   bundledWebRuntime: false

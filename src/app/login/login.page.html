@@ -1,0 +1,66 @@
+
+<ion-content>
+  <figure class="ion-text-center ion-padding">
+    <img src="/assets/logos/logo.png" alt="">
+  </figure>
+  <form [formGroup]="loginForm">
+    <ion-item>
+      <ion-label>
+        Email
+      </ion-label>
+      <ion-input formControlName="email" >
+
+      </ion-input>
+    </ion-item>
+    <div class="validations-error">
+      <ng-container *ngFor="let validation of validationMessages.email">
+        <div *ngIf="loginForm.get('email').hasError(validation.type)
+                    && (loginForm.get('email').dirty || loginForm.get('email').touched)
+        ">
+          {{validation.message}}
+        </div>
+      </ng-container>
+    </div>
+
+
+    <ion-item>
+      <ion-label>
+        Password
+      </ion-label>
+      <ion-input type="password" formControlName="password" >
+
+      </ion-input>
+    </ion-item>
+    <div class="validations-error">
+      <ng-container *ngFor="let validation of validationMessages.password">
+        <div *ngIf="loginForm.get('password').hasError(validation.type)
+                    && (loginForm.get('password').dirty || loginForm.get('password').touched)
+        ">
+          {{validation.message}}
+        </div>
+      </ng-container>
+    </div>
+    <ion-button
+      expand="full"
+      shape="round"
+      color="tertiary"
+      [disabled]="loginForm.invalid"
+      (click)="loginUser()"
+      >
+      Login
+    </ion-button>
+
+  </form>
+</ion-content>
+
+<ion-footer class="ion-text-center">
+  <ion-button
+    color="tertiary"
+    expand="full"
+    shape="round"
+    fill="outline"
+    (click)="goToRegister()"
+    >
+     Registrar
+  </ion-button>
+</ion-footer>

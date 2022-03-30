@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">proyect-sports</string>
+    <string name="title_activity_main">proyect-sports</string>
+    <string name="package_name">proyect.sports.com</string>
+    <string name="custom_url_scheme">proyect.sports.com</string>
+</resources>

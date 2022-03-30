@@ -1,0 +1,16 @@
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <swiper  [config]="swiperConfig"   >
+    <ng-template swiperSlide *ngFor="let slide of slides" >
+      <ion-icon (click)="finish()" class="icon-close" name="close" color="tertiary" ></ion-icon>
+      <div>
+
+        <img class="logo-img" [src]="slide.img" alt="">
+        <h1>{{slide.title}}</h1>
+        <h2>{{slide.subtitle}}</h2>
+        <ion-icon class="ion-icon-style" name="football-outline" color="tertiary"></ion-icon>
+      </div>
+    </ng-template>
+
+  </swiper>
+</ion-content>

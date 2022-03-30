@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="goToMenu()">
+        <ion-icon name="arrow-back-outline" slot="start" color="tertiary"></ion-icon>
+        Volver
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+  <form [formGroup]="configForm">
+    <h3 class="ion-text-center color-title" >Configuración de tiempo actualización</h3>
+
+    <ion-item>
+      <ion-label>Selecciona el tiempo</ion-label>
+      <ion-select (ionChange)="changeTime($event)" formControlName="timeName" placeholder="Tiempo">
+        <ion-select-option *ngFor="let opt of options" [value]="opt.value" > {{opt.value}} </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item >
+      <ion-label>Cantidad de {{timeValueOpts}}</ion-label>
+      <ion-select  formControlName="timeValue" placeholder="Tiempo">
+        <ion-select-option *ngFor="let values of arrayOptions" [value]="values"> {{values}} </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button
+      expand="full"
+      shape="round"
+      color="tertiary"
+      [disabled]="configForm.invalid"
+      (click)="registerConfig()"
+      >
+      Guardar
+    </ion-button>
+  </form>
+</ion-content>
+
+

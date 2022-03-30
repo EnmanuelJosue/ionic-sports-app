@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="tertiary" (click)="back()" >
+        <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        Atras</ion-button>
+    </ion-buttons>
+    <ion-title color="tertiary"  size="small">{{nameLeague}}</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item color="tertiary">
+    <ion-label>Seasons</ion-label>
+    <ion-select  (ionChange)="changeSelect($event)" placeholder="Select One">
+      <ion-select-option *ngFor="let season of options" [value]="season.strSeason"> {{season.strSeason}} </ion-select-option>
+
+    </ion-select>
+  </ion-item>
+
+  <ion-row *ngIf="arrayTable.length>0">
+    <ion-col  class="ion-text-center" size="2">
+      Pos
+    </ion-col>
+    <ion-col  class="ion-text-center" >
+      Equipo
+    </ion-col>
+    <ion-col  class="ion-text-center" size="4">
+      Puntos
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let datatable of arrayTable; let i=index;">
+
+      <ion-col class="ion-text-center border-col" size="2">
+        {{i+1}}
+      </ion-col>
+      <ion-col  class="ion-text-center border-col" >
+        {{datatable.strTeam}}
+      </ion-col>
+      <ion-col  class="ion-text-center border-col" size="4">
+        {{datatable.intPoints}}
+      </ion-col>
+
+  </ion-row>
+</ion-content>
